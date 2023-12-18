@@ -1,3 +1,4 @@
+import Navbar from "./Navbar";
 import Footer from "./Footer";
 import SidebarLink from "./SidebarLink";
 import Sidebar from "./Sidebar";
@@ -29,9 +30,9 @@ export default function Layout({children}){
     <body id="page-top">
 
         <div id="wrapper">
-            
+
             <Sidebar>
-                <SidebarLink title="Analyze" link="/analyze"/>
+                <SidebarLink title="Analyze" link="/"/>
                 <SidebarLink title="Explore" link="/explore"/>
             </Sidebar>
 
@@ -39,7 +40,7 @@ export default function Layout({children}){
 
                 <div id="content">
 
-                    
+                    <Navbar/>
 
                     <div class="container-fluid">
                         {children}

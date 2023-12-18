@@ -8,7 +8,7 @@ export default function Dashboard() {
     const [result, setResult] = useState(null);
     const [ahpReport, setAhpReport] = useState(null);
     const [restaurantCategory, setRestaurantCategory] = useState(0);
-    const [competitionGoal, setCompetitionGoal] = useState("0");
+    const [competitionGoal, setCompetitionGoal] = useState(0);
 
   return (
     <Layout>
@@ -28,6 +28,6 @@ export default function Dashboard() {
       setCompetitionGoal={setCompetitionGoal}
       />}
     </Layout>
-
+      
   );
 }

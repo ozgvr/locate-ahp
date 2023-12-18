@@ -35,7 +35,7 @@ export default function CardScore({ rank, zip, restaurantCategory, competitionGo
                             </div>
                             <div className="col-auto">
                                 <div className="text-xs font-weight-bold text-gray-600 text-uppercase mb-1">
-                                    {score[1].toFixed(2)} / 9</div>
+                                    {score[1]}</div>
                             </div>
                         </div>
                     )

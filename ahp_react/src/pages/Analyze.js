@@ -28,7 +28,7 @@ export default function Analyze({setResult, setAhpReport, restaurantCategory, se
 
     const cousines = ["bakery","meat","juices","cafe","chicken","foreign","vegetarian","hamburger","mixed","dessert","pizza","seafood","soup","sandwich"]
 
-    const [consistency, setConsistency] = useState(0);
+    const [consistency, setConsistency] = useState(null);
     const [weights, setWeights] = useState({
         "Security": 0.25,
         "Cost": 0.25,
@@ -108,7 +108,6 @@ export default function Analyze({setResult, setAhpReport, restaurantCategory, se
 
     return(
         <Page title="Analyze">
-
             <Row>
                 <Col md={8} className="mb-3">
                     <Card title="Restaurant Category">
@@ -133,7 +132,7 @@ export default function Analyze({setResult, setAhpReport, restaurantCategory, se
                                     label={`Maximize`}
                                     value="0"
                                     onChange={handleCompetitionGoalChange}
-                                    checked={competitionGoal === "0"}
+                                    checked="true"
                                 />                            
                                 <Form.Check
                                     inline
@@ -143,7 +142,6 @@ export default function Analyze({setResult, setAhpReport, restaurantCategory, se
                                     label={`Minimize`}
                                     value="1"
                                     onChange={handleCompetitionGoalChange}
-                                    checked={competitionGoal === "1"}
                                 />                            
                             </div>
                         </div>
@@ -229,7 +227,7 @@ export default function Analyze({setResult, setAhpReport, restaurantCategory, se
                     </Card>
                 </Col>
             </Row>
-            <Button onClick={getResults} disabled={!(consistency<=0.1)}>Get Results</Button>
+            <Button onClick={getResults} disabled={!(consistency!=null && consistency<=0.1)}>Get Results</Button>
         </Page>
     );
 }
